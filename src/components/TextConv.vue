@@ -1,9 +1,10 @@
 <template>
   <div class="text-conv">
     <label for="conv">
-      <input :value="$store.state.inputValue" type="text" id="conv" />
+      <input :value="$store.state.inputValue" @input="$store.commit('updateInputValue', $event.target)" type="text"
+        id="conv" />
     </label>
-    <h2>{{}} ff</h2>
+    <h2>{{}}</h2>
   </div>
 </template>
 
