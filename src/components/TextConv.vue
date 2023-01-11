@@ -1,7 +1,7 @@
 <template>
   <div class="text-conv">
     <label for="conv">
-      <input :value="44" type="text" id="conv" />
+      <input :value="$store.state.inputValue" type="text" id="conv" />
     </label>
     <h2>{{}} ff</h2>
   </div>
