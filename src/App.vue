@@ -2,22 +2,22 @@
   <NavBar />
   <TextConv />
   <!-- <ExchangeRates /> -->
+  <h1>{{ store.state.cryptoRates }}</h1>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 /* import ExchangeRates from './components/ExchangeRates.vue'; */
+import { onMounted } from 'vue';
+import { useStore } from 'vuex';
 import NavBar from './components/NavBar.vue';
 import TextConv from './components/TextConv.vue';
 
-export default {
-  data() {
-    return {};
-  },
-  components: { NavBar, TextConv },
-  /* mounted() {
-    this.$store.actions.getCryptoRates();
-  }, */
-};
+const store = useStore();
+
+onMounted(() => {
+  store.dispatch('getCryptoRates');
+});
+
 </script>
 
 <style lang="scss">
