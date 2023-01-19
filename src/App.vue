@@ -1,16 +1,15 @@
 <template>
   <NavBar />
-  <TextConv />
-  <!-- <ExchangeRates /> -->
-  <h1>{{ store.state.cryptoRates }}</h1>
+  <!-- <TextConv /> -->
+  <ExchangeRates />
 </template>
 
 <script lang="ts" setup>
-/* import ExchangeRates from './components/ExchangeRates.vue'; */
 import { onMounted } from 'vue';
 import { useStore } from 'vuex';
 import NavBar from './components/NavBar.vue';
-import TextConv from './components/TextConv.vue';
+import ExchangeRates from './components/ExchangeRates.vue';
+/* import TextConv from './components/TextConv.vue'; */
 
 const store = useStore();
 
