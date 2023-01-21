@@ -23,14 +23,10 @@
 </div>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { useStore } from 'vuex';
 
 const store = useStore();
-/* function returnRates(crypto: string) {
-  return crypto;
-} */
-
 </script>
 
 <style lang="scss" scoped>

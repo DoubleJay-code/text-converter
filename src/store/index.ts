@@ -16,8 +16,7 @@ export default createStore({
     totalPair: [] as string[][],
     convertResult: '' as string,
   },
-  getters: {
-  },
+  getters: {},
   mutations: {
     updateInputValue(state, event: HTMLInputElement) {
       state.inputValue = event.value;

@@ -1,23 +1,14 @@
 <template>
   <nav class="navbar">
     <div class="wrapper">
-      <MyButton>Текстовый конвертер</MyButton>
-      <MyButton>Актуальный Курс</MyButton>
+      <MyButton :refs="'/'">Текстовый конвертер</MyButton>
+      <MyButton :refs="'/rates'">Актуальный Курс</MyButton>
     </div>
   </nav>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import MyButton from './UI/MyButoon.vue';
-
-export default {
-  data() {
-    return {};
-  },
-  components: {
-    MyButton,
-  },
-};
 </script>
 
 <style scoped>
